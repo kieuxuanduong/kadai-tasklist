@@ -10,6 +10,8 @@
         <p>Updated at: <fmt:formatDate value="${task.updated_at}" pattern="yyyy-MM-dd HH;mm:ss"/></p>
 
         <p><a href="${pageContext.request.contextPath}/index">タスクリストへ戻る</a></p>
+        <p><a href="${pageContext.request.contextPath}/edit?id=${task.id}">タスクを編集する</a></p>
+
     </c:param>
 
 
