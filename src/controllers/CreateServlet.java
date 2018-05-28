@@ -46,7 +46,7 @@ public class CreateServlet extends HttpServlet {
 			t.setUpdated_at(currentTime);
 
 			String error = TaskValidator.validate(t);
-			if (error != null) {
+			if (!(error == null || error.equals(""))) {
 				em.close();
 				request.setAttribute("_token", request.getSession().getId());
 				request.setAttribute("error", error);
